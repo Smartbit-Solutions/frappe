@@ -7,7 +7,7 @@ app_title = "Frappe Framework"
 app_publisher = "Frappe Technologies"
 app_description = "Full stack web framework with Python, Javascript, MariaDB, Redis, Node"
 app_license = "MIT"
-app_logo_url = "/assets/frappe/images/frappe-framework-logo.svg"
+app_logo_url = "/assets/frappe/images/sbs-logo.png"
 develop_version = "17.x.x-develop"
 app_home = "/app/build"
 
