@@ -1,5 +1,5 @@
 frappe.email_defaults = {
-	"Frappe Mail": {
+	"Smartbits Mail": {
 		domain: null,
 		password: null,
 		awaiting_password: 0,
@@ -131,7 +131,7 @@ function add_helpful_links(frm) {
 		frm.set_df_property("password", "description", "");
 	}
 
-	if (frm.doc.service === "Frappe Mail") {
+	if (frm.doc.service === "Smartbits Mail") {
 		frm.set_df_property(
 			"api_secret",
 			"description",
@@ -225,7 +225,7 @@ frappe.ui.form.on("Email Account", {
 	},
 
 	validate_frappe_mail_settings: function (frm) {
-		if (frm.doc.service == "Frappe Mail") {
+		if (frm.doc.service == "Smartbits Mail") {
 			frappe.call({
 				doc: frm.doc,
 				method: "validate_frappe_mail_settings",

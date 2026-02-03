@@ -370,7 +370,7 @@
    "label": "Expiry time of QR Code Image Page"
   },
   {
-   "default": "Frappe Framework",
+   "default": "Smartbits LCS",
    "depends_on": "enable_two_factor_auth",
    "fieldname": "otp_issuer_name",
    "fieldtype": "Data",
@@ -451,7 +451,7 @@
    "label": "Reports"
   },
   {
-   "default": "Frappe",
+   "default": "Smartbits LCS",
    "description": "The application name will be used in the Login page.",
    "fieldname": "app_name",
    "fieldtype": "Data",
