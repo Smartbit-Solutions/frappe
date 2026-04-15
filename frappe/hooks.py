@@ -3,9 +3,9 @@ import os
 from . import __version__ as app_version
 
 app_name = "frappe"
-app_title = "Frappe Framework"
-app_publisher = "Frappe Technologies"
-app_description = "Full stack web framework with Python, Javascript, MariaDB, Redis, Node"
+app_title = "Smartbits LCS"
+app_publisher = "Smartbit Solutions Kft."
+app_description = "Smartbits LCS — alkalmazáskeretrendszer"
 app_license = "MIT"
 app_logo_url = "/assets/frappe/images/sbs-logo.png"
 develop_version = "17.x.x-develop"
