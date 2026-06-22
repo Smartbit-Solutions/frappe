@@ -144,8 +144,17 @@ class UserPermissions:
 						no_list_view_link.append(dt)
 					else:
 						self.can_read.append(dt)
-						if dtp["module"] not in self.permitted_modules:
-							self.permitted_modules.append(dtp["module"])
+
+				# permitted_modules tracks "which modules does this user
+				# have any non-readonly access to" — independent of which
+				# specific branch above fired. Without this, users with
+				# `create`/`write` perms on every DocType in a module never
+				# see that module in `permitted_modules`, which breaks the
+				# Smartbits desk's `workspace_sidebar_item` filter (see
+				# frappe/boot.py::get_sidebar_items).
+				if (p.get("read") or p.get("write") or p.get("create")) and not dtp.get("read_only"):
+					if dtp["module"] not in self.permitted_modules:
+						self.permitted_modules.append(dtp["module"])
 			if p.get("submit"):
 				self.can_submit.append(dt)
 
